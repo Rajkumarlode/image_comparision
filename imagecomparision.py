@@ -7,9 +7,9 @@ from google.colab.patches import cv2_imshow
 #using opps concept  in python
 #it's a demo_code of comparision  of gray scale image with original one
 
-class imagecomparison:
-    imagePaths = list(paths.list_images('/content/photos'))
+class imagecomparision:
     def __init__(self):
+        imagePaths = list(paths.list_images('/content/photos'))
         for imagePath in imagePaths:
             image = cv2.imread(imagePath)
             gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
@@ -27,8 +27,8 @@ class imagecomparison:
                 else:
                      print("no difference")
             print(mse)
-            print(any_dif)
-#imagecomparison()
-obj1=imagecomparision()
-print(obj1.mse())
+            print(any_diff)
+print(imagecomparision())
+#obj1=imagecomparision()
+#print(obj1.mse())
     
